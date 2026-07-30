@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Artigos - Portal Ambiental</title>
-    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="css/estilo.css">
 </head>
 <body>
     <header>
@@ -12,14 +12,53 @@
         <p>Explorando ideias e soluções para um planeta sustentável.</p>
     </header>
 
-    <nav>
+    <nav class="main-nav" aria-label="Menu Principal">
         <a href="index.html">Início</a>
-        <a href="noticias.html">Notícias</a>
-        <a href="artigos.html">Artigos</a>
+        <a href="artigos.html" aria-current="page">Artigos</a>
+        <a href="curiosidades.html">Curiosidades</a>
+        <a href="dicas.html">Dicas</a>
         <a href="contato.html">Contato</a>
+        <a href="sobre.html">Sobre</a>
     </nav>
 
-    <main class="container grid">
+    <main>
+        <h2>Nossos Artigos:</h2>
+        <nav class="article-nav" aria-label="Índice dos Artigos">
+            <a href="#sustentabilidade">O que é sustentabilidade?</a>
+            <a href="#coleta_seletiva">Coleta Seletiva: Por que ela é importante?</a>
+            <a href="#economizar_agua">Como economizar água no dia a dia</a>
+            <a href="#plastico_nos_oceanos">O Impacto do plástico nos oceanos</a>
+            <a href="#pequenas_atitudes">Como pequenas atitudes ajudam o meio ambiente</a>
+            <a href="#importancia_das_arvores">A importância das árvores nas cidades</a>
+        </nav>
+
+        <article id="sustentabilidade" class="">
+            <h3>O que é sustentabilidade?</h3>
+        </article>
+
+        <article id="coleta_seletiva" class="">
+            <h3>Coleta Seletiva: Por que ela é importante?</h3>
+        </article>
+
+        <article id="economizar_agua">
+            <h3>Como economizar água no dia a dia</h3>
+        </article>
+
+        <article id="plastico_nos_oceanos">
+            <h3>O Impacto do plástico nos oceanos</h3>
+        </article>
+
+        <article id="pequenas_atitudes" class="">
+            <h3>Como pequenas atitudes ajudam o meio ambiente</h3>
+        </article>
+
+        <article id="importancia_das_arvores" class="">
+            <h3>A importância das árvores nas cidades</h3>
+        </article>
+
+    </main>
+
+    !<!--<main class="container grid">
         <div class="article-item">
             <a href="artigo01.html" class="article-link">
                 <img src="https://picsum.photos/300/200?random=1" alt="Imagem ilustrativa sobre fauna">
@@ -44,14 +83,13 @@
             </a>
         </div>
     </main>
+    -->
 
     <footer>
-        <p>&copy; 2024 Portal Ambiental. Todos os direitos reservados.</p>
+        <p>&copy; 2026 Portal Ambiental. Todos os direitos reservados.</p>
         <div class="social-links">
             <a href="https://instagram.com" target="_blank">Instagram</a>
-            <a href="https://twitter.com" target="_blank">Twitter</a>
-            <a href="https://threads.net" target="_blank">Threads</a>
-            <a href="https://youtube.com" target="_blank">YouTube</a>
+            <a href="https://GitHub.com" target="_blank">GitHub</a>
         </div>
     </footer>
 </body>
