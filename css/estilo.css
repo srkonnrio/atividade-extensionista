@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 /* Fontes */
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&family=Open+Sans:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Open+Sans:wght@400;600&display=swap');
 
 * {
     box-sizing: border-box;
@@ -66,21 +66,44 @@ h2, h3 {
     color: white;
 }
 
+.main-nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    background-color: #1B5E20;
+    padding: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+    transition: transform 0.3s ease;
+}
+
+.main-nav.nav-hidden {
+    transform: translateY(-100%);
+}
 
 /* NAVEGADOR DOS ARTIGOS E CURIOSIDADES --- COMPARTILHAM O MESMO ESTILO */
 
-.article-nav a, .curiosity-nav a{
-    font-size: 1.1rem;
+.article-nav a, .curiosity-nav a, .inicio-card a{
     font-family: 'Roboto Slab', serif;
-    text-decoration: none;
+    font-size: 1.1rem;
+    
     color: #333;
-    transition: color 0.3s ease; 
+    text-decoration: none;
+    
     text-underline-offset: 4px;
+    
+    transition: color 0.3s ease;
 }
 
-.article-nav a:hover, .curiosity-nav a:hover{
-    text-decoration-line: underline;
-    text-decoration-style: dashed;
+.article-nav a:hover, .curiosity-nav a:hover, .inicio-card a:hover{
+    font-weight: 700;
     color: #1B5E20;
 }
 
@@ -99,9 +122,33 @@ h2, h3 {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-article p, section p {
-    text-align: justify;
+
+/* PÁGINA INICIAL */
+.inicio-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
 }
+
+.hero {
+    padding-block: 2rem;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 2rem;
+}
+
+.hero p {
+    text-align: center;
+}
+
+.artigos-conteudo p,
+.curiosidades-conteudo p {
+    text-align: justify;
+    line-height: 1.7;
+}
+
 .social-links {
     margin-top: 15px;
 }
@@ -156,14 +203,14 @@ article p, section p {
     padding: 24px;
 }
 
-.tip-card {
+.tip-card, .inicio-card {
     padding: 20px;
     border: 1px solid #cccccc;
     border-radius: 10px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.tip-card:hover {
+.tip-card:hover, .inicio-card:hover {
     transform: scale(1.05);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
 }
@@ -175,12 +222,12 @@ article p, section p {
     border-radius: 10px;
 }
 
-.curiosity-fig {
+.figura-conteudo {
     width: min(100%, 700px);
     margin: 1.5rem auto;
 }
 
-.curiosity-fig img {
+.figura-conteudo img {
     display: block;
     width: 100%;
     aspect-ratio: 4 / 3;
@@ -188,7 +235,7 @@ article p, section p {
     border-radius: 10px;
 }
 
-.curiosity-fig figcaption {
+.figura-conteudo figcaption {
     margin-top: 0.5rem;
     padding-inline: 0.5rem;
     color: #555;
