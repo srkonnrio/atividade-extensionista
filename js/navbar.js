@@ -9,19 +9,19 @@ if (navbar) {
     window.addEventListener("scroll", () => {
         const posicaoAtual = window.scrollY;
 
-        // Mantém a navbar visível perto do topo.
+        // TOPO DA PÁGINA
         if (posicaoAtual <= limiteInicial) {
             navbar.classList.remove("nav-hidden");
             ultimaPosicao = posicaoAtual;
             return;
         }
 
-        // Descendo: esconde.
+        // ROLANDO PARA BAIXO
         if (posicaoAtual > ultimaPosicao) {
             navbar.classList.add("nav-hidden");
         }
 
-        // Subindo: mostra.
+        // ROLANDO PARA CIMA
         else {
             navbar.classList.remove("nav-hidden");
         }

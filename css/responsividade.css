@@ -1,39 +1,44 @@
-/* Responsividade: Ajustando layout para telas pequenas */
-@media (max-width: 768px) {
-    nav {
-        flex-direction: column;
-    }
+/* RESPONSIVIDADE */
 
-    .grid {
-        grid-template-columns: 1fr;
-    }
-
-    .contact-form {
-        width: 100%;
+/* Tablets e telas intermediárias */
+@media (max-width: 900px) {
+    .dicas-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
-
-
-@media (max-width: 900px){
-
-    .tip-grid{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-}
-
-@media (max-width:600px){
-
-    .tip-grid{
-        grid-template-columns:1fr;
-    }
-
-}
-
-
+/* Página inicial em uma única coluna */
 @media (max-width: 800px) {
     .inicio-grid {
         grid-template-columns: 1fr;
+    }
+}
+
+/* Celulares */
+@media (max-width: 600px) {
+    .main-nav {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 5px;
+    }
+
+    .main-nav a {
+        text-align: center;
+        padding: 8px;
+    }
+
+    .dicas-grid {
+        grid-template-columns: 1fr;
+        padding: 16px;
+    }
+
+    .container {
+        width: calc(100% - 20px);
+        margin: 10px auto;
+        padding: 15px;
+    }
+
+    .figura-conteudo figcaption {
+        font-size: 0.8rem;
     }
 }
